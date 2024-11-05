@@ -1,0 +1,35 @@
+system_prompts:
+  prompt: |
+    INSTRUCTION: Match the values from Label to the values in list Superclassing Labels. Return the semantic matched values as a JSON object. If no matches found, return {'result': None}. Do not return string 'None'. Do not generate superclass that not is listed in below Superclass Labels.
+
+    Superclass Labels:
+    superclass_names = [
+    "Bird",
+    "Boat",
+    "Car",
+    "Cat",
+    "Dog",
+    "Fruit",
+    "Fungus",
+    "Insect",
+    "Monkey"
+    ]
+
+    Examples:
+    # Example 1
+    Label: "chicken"
+    Return: {'result': "Bird"}
+
+    # Example 2
+    Label: "tench"
+    Return: {'result': None}
+
+    DO NOT RETURN STRING 'NONE'!
+input_format: |
+  Label: {label}
+
+  please output the semantic matched values between the label and the superclass labels.
+
+model_type: "gpt-4o-mini-2024-07-18"
+model_temperature: 0.5
+max_tokens: 2048
