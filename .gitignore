@@ -1,2 +1,4 @@
 data/ImageNetV2/raw/*
+data/ImageNet/*
 .env
+results/*
